@@ -1,6 +1,6 @@
 ## [Современные PHP-фреймворки](#) - Yii2
 **ДЗ №1** 
-* [Изменение текста на гдавной странице](https://github.com/skiphog/profit-yii2/blob/master/views/site/index.php)
+* [Изменение текста на главной странице](https://github.com/skiphog/profit-yii2/blob/master/views/site/index.php)
 
 **ДЗ №2 Middleware**
 * [Переопределил behaviors()](https://github.com/skiphog/profit-yii2/blob/master/controllers/TestVerifyController.php)
