@@ -6,17 +6,11 @@ use yii\base\Widget;
 
 class NewsWidget extends Widget
 {
-    const SIZE = 10;
-
-    public $size;
-
-    public function init()
-    {
-        parent::init();
-        if (null === $this->size) {
-            $this->size = self::SIZE;
-        }
-    }
+    /**
+     * Размер массива по умолчанию
+     * @var int
+     */
+    public $size = 10;
 
     public function run()
     {
