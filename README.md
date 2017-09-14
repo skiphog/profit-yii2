@@ -6,3 +6,8 @@
 * [Переопределил behaviors()](https://github.com/skiphog/profit-yii2/blob/master/controllers/TestVerifyController.php)
 * [Фильтр](https://github.com/skiphog/profit-yii2/blob/master/components/Verify.php)
 
+**ДЗ №3 Шаблоны**
+* [Вывести текущую дату](https://github.com/skiphog/profit-yii2/blob/master/views/layouts/app.php#L34)
+* [Форма поиска](https://github.com/skiphog/profit-yii2/blob/master/views/layouts/app.php#L26) (Подключение [библиотеки в Asset](https://github.com/skiphog/profit-yii2/blob/master/assets/AppAsset.php))
+* [Виджет новостей](https://github.com/skiphog/profit-yii2/blob/master/components/NewsWidget.php) и [применение](https://github.com/skiphog/profit-yii2/blob/master/views/test-news/testNews.php)
+
