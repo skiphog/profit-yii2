@@ -1,0 +1,16 @@
+<?php
+/* @var $this yii\web\View */
+
+use app\components\ArticleWidget;
+
+?>
+<h1>news/index</h1>
+
+<p>
+    You may change the content of this page by modifying
+    the file <code><?= __FILE__; ?></code>.
+</p>
+
+<div>
+    <?php echo ArticleWidget::widget(); ?>
+</div>
