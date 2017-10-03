@@ -64,7 +64,6 @@ class Article extends ActiveRecord
      */
     public static function getNewsByRubrics()
     {
-
         /** @var Article[] $articles */
         $articles = self::find()->with(['author', 'rubric'])
             ->where(['active' => true])
