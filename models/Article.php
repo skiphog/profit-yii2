@@ -34,7 +34,12 @@ class Article extends ActiveRecord
         return $this->hasOne(Rubric::className(), ['id' => 'rubric_id']);
     }
 
-    public function isRedacted()
+    /**
+     * Признак отредактированности статьи
+     *
+     * @return bool
+     */
+    public function isRedacted(): bool
     {
         return null !== $this->created_at;
     }
