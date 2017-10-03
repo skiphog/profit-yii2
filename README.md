@@ -1,4 +1,4 @@
-## [Современные PHP-фреймворки](#) - Yii2
+## [Современные PHP-фреймворки](https://github.com/skiphog/profit-frameworks) - Yii2
 **ДЗ №1** 
 * [Изменение текста на главной странице](https://github.com/skiphog/profit-yii2/blob/master/views/site/index.php)
 
