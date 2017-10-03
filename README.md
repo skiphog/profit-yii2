@@ -17,4 +17,7 @@
 * [Виджет для вывода новостей](https://github.com/skiphog/profit-yii2/blob/master/components/ArticleWidget.php) (Назвал так, т.к. NewsWidget уже занят для прошлого ДЗ). [Шаблон для виджета](https://github.com/skiphog/profit-yii2/blob/master/components/views/articles.php) и [применение](https://github.com/skiphog/profit-yii2/blob/master/views/news/index.php#L15)
 
 **ДЗ №5 ORM**
-* Миграции для [новостей и рубрик](#)
+* Миграции для [новостей и рубрик](https://github.com/skiphog/profit-yii2/tree/master/migrations)
+* [Получение списка](https://github.com/skiphog/profit-yii2/blob/master/controllers/NewsController.php#L22) "неархивных" новостей за текущую неделю, в разбивке по дням недели и по рубрикам. [С помощью метода в модели.](https://github.com/skiphog/profit-yii2/blob/master/models/Article.php#L60)
+* [Отображение этого списка на странице сайта](https://github.com/skiphog/profit-yii2/blob/master/views/news/newsByRubrics.php#L30), причем если новость редактировалась после публикации - должна стоять метка "Обновлено".
+* [Списание в архив всех новостей](https://github.com/skiphog/profit-yii2/blob/master/controllers/NewsController.php#L32) из выбранных рубрик, которые были опубликованы ранее указанной даты.
