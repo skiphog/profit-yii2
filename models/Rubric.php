@@ -6,7 +6,7 @@ use yii\db\ActiveRecord;
 
 /**
  * @property integer $id
- * @property string $name
+ * @property string $title
  */
 class Rubric extends ActiveRecord
 {

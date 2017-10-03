@@ -15,6 +15,7 @@ use yii\db\ActiveRecord;
  * @property string $updated_at
  *
  * @property Author $author
+ * @property Rubric $rubric
  */
 class Article extends ActiveRecord
 {
@@ -36,5 +37,42 @@ class Article extends ActiveRecord
     public function isRedacted()
     {
         return null !== $this->created_at;
+    }
+
+    /**
+     * Возвращает все активные записи за текущую неделю в виде массива
+     * [ День недели => [
+     *      [Заголовок рубрики => [Новость],[Новость],...],
+     *      [Заголовок рубрики => [Новость],[Новость],...],
+     *      [Заголовок рубрики => [Новость],[Новость],...],
+     *
+     *   ],
+     *   День недели => [
+     *      [Заголовок рубрики => [Новость],[Новость],...],
+     *      [Заголовок рубрики => [Новость],[Новость],...],
+     *      [Заголовок рубрики => [Новость],[Новость],...],
+     *   ],
+     *   ...
+     * ]
+     *
+     * @return array
+     */
+    public static function getNewsByRubrics()
+    {
+
+        /** @var Article[] $articles */
+        $articles = self::find()->with(['author', 'rubric'])
+            ->where(['active' => true])
+            ->andWhere('year(created_at) = year(now()) and week(created_at, 1) = week(now(), 1)')
+            ->orderBy(['created_at' => SORT_DESC])
+            ->all();
+
+        $tmp = [];
+
+        foreach ($articles as $article) {
+            $tmp[(new \DateTime($article->created_at))->format('l')][$article->rubric->title][] = $article;
+        }
+
+        return $tmp;
     }
 }
