@@ -14,4 +14,7 @@
 **ДЗ №4 Миграции**
 * Созданы миграции для таблиц: [Авторы](https://github.com/skiphog/profit-yii2/blob/master/migrations/m170917_172412_create_authors_table.php) и [Новости](https://github.com/skiphog/profit-yii2/blob/master/migrations/m170917_172754_create_news_table.php)
 * Связь Авторов - [один ко многим](https://github.com/skiphog/profit-yii2/blob/master/models/Author.php#L18). У новостей [обратная связь](https://github.com/skiphog/profit-yii2/blob/master/models/Article.php#L24).
-* [Виджет для вывода новостей](https://github.com/skiphog/profit-yii2/blob/master/components/ArticleWidget.php) (Назвал так, т.к. NewsWidget уже занят для прошлого ДЗ). [Шаблон для виджета](https://github.com/skiphog/profit-yii2/blob/master/components/views/articles.php) и [применение](https://github.com/skiphog/profit-yii2/blob/master/views/news/index.php#L15) 
+* [Виджет для вывода новостей](https://github.com/skiphog/profit-yii2/blob/master/components/ArticleWidget.php) (Назвал так, т.к. NewsWidget уже занят для прошлого ДЗ). [Шаблон для виджета](https://github.com/skiphog/profit-yii2/blob/master/components/views/articles.php) и [применение](https://github.com/skiphog/profit-yii2/blob/master/views/news/index.php#L15)
+
+**ДЗ №5 ORM**
+* Миграции для [новостей и рубрик](#)

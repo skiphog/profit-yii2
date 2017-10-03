@@ -17,6 +17,8 @@ class m170917_172754_create_news_table extends Migration
             'title'      => $this->string()->notNull(),
             'content'    => $this->text()->notNull(),
             'author_id'  => $this->integer()->unsigned(),
+            'rubric_id'  => $this->integer()->unsigned()->notNull(),
+            'active'     => $this->boolean()->defaultValue(true)->notNull(),
             'created_at' => $this->dateTime(),
             'updated_at' => $this->dateTime()
         ]);
@@ -34,6 +36,20 @@ class m170917_172754_create_news_table extends Migration
             'authors',
             'id'
         );
+
+        $this->createIndex(
+            'idx-news-rubric_id',
+            'news',
+            'rubric_id'
+        );
+
+        $this->addForeignKey(
+            'fk-news-rubric_id',
+            'news',
+            'rubric_id',
+            'rubrics',
+            'id'
+        );
     }
 
     /**
@@ -46,8 +62,18 @@ class m170917_172754_create_news_table extends Migration
             'news'
         );
 
+        $this->dropForeignKey(
+            'fk-news-rubric_id',
+            'news'
+        );
+
         $this->dropIndex(
             'idx-news-author_id',
+            'news'
+        );
+
+        $this->dropIndex(
+            'idx-news-rubric_id',
             'news'
         );
 
